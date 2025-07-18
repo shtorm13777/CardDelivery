@@ -23,11 +23,9 @@ public class CardDeliveryTest {
         String date = setLocalDate(3);
         open("http://localhost:9999");
         $("[data-test-id=city] input").setValue("Москва");
-        //$(byText("Выберите дату встречи с представителем банка")).click();
         $("[data-test-id=date] input").doubleClick().sendKeys(date);
         $("[data-test-id=name] input").setValue("Клименко Михаил");
         $("[data-test-id=phone] input").setValue("+79685550055");
-        //$x("//*[text()='Я соглашаюсь с условиями обработки и использования моих персональных данных']").click();
         $("[data-test-id=agreement]").click();
         $$("button").find(exactText("Забронировать")).click();
         $(byText("Успешно!")).shouldBe(visible, Duration.ofMillis(15000));
@@ -55,11 +53,9 @@ public class CardDeliveryTest {
         String date = setLocalDate(4);
         open("http://localhost:9999");
         $("[data-test-id=city] input").setValue("Москва");
-        //$(byText("Выберите дату встречи с представителем банка")).click();
         $("[data-test-id=date] input").doubleClick().sendKeys(date);
         $("[data-test-id=name] input").setValue("Клименко Михаил");
         $("[data-test-id=phone] input").setValue("+79685550055");
-        //$x("//*[text()='Я соглашаюсь с условиями обработки и использования моих персональных данных']").click();
         $("[data-test-id=agreement]").click();
         $$("button").find(exactText("Забронировать")).click();
         $(byText("Успешно!")).shouldBe(visible, Duration.ofMillis(15000));
@@ -72,11 +68,9 @@ public class CardDeliveryTest {
         String date = setLocalDate(3);
         open("http://localhost:9999");
         $("[data-test-id=city] input").setValue("Благовещенск");
-        //$(byText("Выберите дату встречи с представителем банка")).click();
         $("[data-test-id=date] input").doubleClick().sendKeys(date);
         $("[data-test-id=name] input").setValue("Салтыков-Щедрин Михаил");
         $("[data-test-id=phone] input").setValue("+79685550055");
-        //$x("//*[text()='Я соглашаюсь с условиями обработки и использования моих персональных данных']").click();
         $("[data-test-id=agreement]").click();
         $$("button").find(exactText("Забронировать")).click();
         $(byText("Успешно!")).shouldBe(visible, Duration.ofMillis(15000));
